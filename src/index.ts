@@ -6,7 +6,12 @@ export function hello(req: Request, res: Response) {
 }
 
 export function two(req: Request, res: Response) {
-  res.send(JSON.stringify(req));
+  res.send(JSON.stringify(req, function (key, value) {
+    if (['socket', 'client', 'req'].includes(key)) {
+      return '(not serialized)';
+    }
+    return value;
+  }));
 }
 
 export const adaptedHello = adapt(hello);

@@ -1,4 +1,4 @@
-import { APIGatewayEvent, APIGatewayProxyResultV2 } from 'aws-lambda';
+import { APIGatewayProxyResultV2 } from 'aws-lambda';
 import { Request, Response } from '@google-cloud/functions-framework';
 import http from 'http';
 import { Errback, CookieOptions, MediaType, NextFunction, ParamsDictionary } from 'express-serve-static-core';
