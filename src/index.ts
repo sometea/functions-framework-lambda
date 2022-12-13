@@ -2,7 +2,7 @@ import { http, Request, Response } from '@google-cloud/functions-framework';
 import { adapt } from './sls-adapter';
 
 export function hello(req: Request, res: Response) {
-  res.send('Hello Norld!');
+  res.send('Hello World!');
 }
 
 export function two(req: Request, res: Response) {
