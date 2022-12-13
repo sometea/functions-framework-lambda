@@ -1,0 +1,28 @@
+{
+  "name": "functions-framework",
+  "version": "1.0.0",
+  "description": "testing out the google cloud functions framework",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "functions-framework --target=hello,two",
+    "prestart": "npm run build",
+    "gcp-build": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "functions",
+    "serverless",
+    "framework"
+  ],
+  "author": "David Dasenbrook",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.109",
+    "serverless-plugin-typescript": "^2.1.4",
+    "typescript": "^4.9.3"
+  }
+}

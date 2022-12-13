@@ -1,0 +1,29 @@
+service: serverless-node
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: eu-west-1
+
+functions:
+  hello:
+    handler: src/index.adaptedHello
+    events:
+      - http:
+          path: hello
+          method: GET
+  two:
+    handler: src/index.adaptedTwo
+    events:
+      - http:
+          path: two
+          method: GET
+
+plugins:
+  - serverless-plugin-typescript
+
+custom:
+  serverlessPluginTypescript:
+    tsConfigFileLocation: './tsconfig.json'
